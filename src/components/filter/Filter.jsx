@@ -1,5 +1,26 @@
-export const Filter = ({filter, onChange}) => {
-   return (
-      <input type='text' name='filter' value={filter} onChange={ ({ target })=> onChange(target.value) } placeholder='Enter name for Search'></input>
-   )
-}
+import React from "react";
+import PropTypes from "prop-types";
+import styles from "./Filter.module.css";
+
+const Filter = ({ inputValue, handleFilter }) => {
+  return (
+    <>
+      <label>
+        Find contacts by name
+        <input
+          className={styles.filterInput}
+          type="text"
+          value={inputValue}
+          onChange={handleFilter}
+        />
+      </label>
+    </>
+  );
+};
+
+Filter.propTypes = {
+  inputValue: PropTypes.string.isRequired,
+  handleFilter: PropTypes.func.isRequired,
+};
+
+export default Filter;

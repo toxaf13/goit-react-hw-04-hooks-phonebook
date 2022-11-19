@@ -1,0 +1,13 @@
+.form {
+   display: flex;
+   flex-direction: column;
+   border-radius: 5px;
+ }
+ .formInput {
+   display: block;
+   margin: 10px 0;
+   outline: none;
+ }
+ .formBtn {
+   padding: 5px 20px;
+ }
